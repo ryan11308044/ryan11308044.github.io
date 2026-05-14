@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>義食之選：台灣義大利料理全攻略 - 現代部落格</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            gold: '#C5A059',
+                            dark: '#0F1115',
+                            accent: '#E63946',
+                            muted: '#1E2128',
+                        }
+                    },
+                    fontFamily: {
+                        display: ['Outfit', 'Noto Sans TC', 'sans-serif'],
+                        body: ['Noto Sans TC', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0F1115;
+            color: #E2E8F0;
+            overflow-x: hidden;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 24px;
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #FFF 0%, #C5A059 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-overlay {
+            background: linear-gradient(to bottom, rgba(15, 17, 21, 0) 0%, rgba(15, 17, 21, 0.9) 100%);
+        }
+        .drop-cap::first-letter {
+            font-size: 4rem;
+            font-weight: 800;
+            color: #C5A059;
+            float: left;
+            line-height: 1;
+            margin-right: 0.5rem;
+            font-family: 'Outfit';
+        }
+        .custom-shadow {
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        }
+    </style>
+</head>
+<body class="font-body leading-relaxed antialiased">
+
+    <!-- Progress Bar -->
+    <div class="fixed top-0 left-0 w-full h-1 bg-brand-dark z-50">
+        <div id="progress-bar" class="h-full bg-brand-gold w-0 transition-all duration-150"></div>
+    </div>
+
+    <!-- Navigation (Micro) -->
+    <nav class="fixed top-0 left-0 w-full z-40 p-6 flex justify-between items-center transition-all duration-300" id="navbar">
+        <div class="text-2xl font-display font-extrabold tracking-tighter text-white">
+            M11308044<span class="text-brand-gold">.</span>
+        </div>
+        <div class="hidden md:flex gap-8 text-sm font-medium tracking-widest uppercase text-gray-400">
+            <a href="#" class="hover:text-brand-gold transition-colors">Evolution</a>
+            <a href="#" class="hover:text-brand-gold transition-colors">Guide</a>
+            <a href="#" class="hover:text-brand-gold transition-colors">Controversy</a>
+        </div>
+        <button class="bg-white/10 hover:bg-white/20 px-5 py-2 rounded-full text-xs font-bold transition-all border border-white/10 backdrop-blur-md">
+            SUBSCRIBE
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative h-[90vh] w-full flex items-end overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src='https://opal.google/board/blobs/5aff95a4-68c9-4d72-aea4-533427aeb7c3' alt='Italian Cuisine Banner' class="w-full h-full object-cover scale-105" />
+            <div class="absolute inset-0 hero-overlay"></div>
+        </div>
+        
+        <div class="relative z-10 max-w-6xl mx-auto px-6 pb-20 w-full animate-fade-in-up">
+            <div class="inline-block px-3 py-1 rounded-full bg-brand-gold/20 border border-brand-gold/30 text-brand-gold text-xs font-bold tracking-widest uppercase mb-6">
+                Culinary Evolution
+            </div>
+            <h1 class="text-4xl md:text-7xl font-display font-extrabold text-white mb-6 leading-[1.1] tracking-tight max-w-4xl">
+                🍕 義食之選：台灣義大利料理全攻略！<br/>
+                <span class="text-gradient">從五星級到職人小館的美味進化論</span>
+            </h1>
+            <div class="flex items-center gap-4 text-gray-400">
+                <div class="flex -space-x-2">
+                    <div class="w-10 h-10 rounded-full border-2 border-brand-dark bg-gray-800 flex items-center justify-center text-xs font-bold">M</div>
+                </div>
+                <div class="text-sm">
+                    <p class="font-bold text-white">Editorial Team</p>
+                    <p>May 24, 2024 • 8 min read</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 py-20">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+            
+            <!-- Main Content -->
+            <article class="lg:col-span-8 space-y-12">
+                
+                <section class="prose prose-invert prose-lg max-w-none">
+                    <p class="drop-cap text-xl text-gray-300 leading-relaxed first-letter:mr-3">
+                        在台灣，若要論及哪一種異國料理最能跨越年齡與階層，除了佔據地緣優勢的日本料理，大概就是義大利菜了。我們常笑說台灣人的第二個胃是留給義大利麵的，這話一點也不假。從巷弄間百元有找的肉醬麵，到動輒數千元的米其林星級盛宴，這股來自地中海的風味早已內化成我們飲食文化的一環。
+                    </p>
+                    <p class="text-gray-400 mt-6">
+                        當我們深入觀察這塊土地的食飲版圖，不難發現鮮明的地域性格：台北無疑是精緻餐飲（Fine Dining）的修羅場，主廚們在此詰問傳統與創新的邊界；台中則展現了另一種闊氣的美學，空間要大、建築要美，甚至將在地食材玩出一種豪邁的混血感；而竹北則是近年異軍突起的黑馬，在科技新貴的支撐下，那些低調奢華、強調專業底蘊的職人餐酒館，正成為另一種精緻生活的代名詞。
+                    </p>
+                </section>
+
+                <!-- Time Machine Bento Grid -->
+                <section class="glass-card p-8 md:p-12 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
+                        <svg class="w-32 h-32 text-brand-gold" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg>
+                    </div>
+                    <h2 class="text-3xl font-display font-bold text-white mb-8 border-l-4 border-brand-gold pl-6">時光機：那些年，我們一起吃過的「改良版」義大利麵</h2>
+                    <div class="space-y-6 text-gray-300">
+                        <p>回溯台灣義大利料理的發展，那是一場關於「想像」到「真實」的漫長演進。</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
+                            <div class="bg-white/5 p-6 rounded-2xl border border-white/5 hover:border-brand-gold/50 transition-all duration-500">
+                                <span class="text-4xl font-display font-black text-brand-gold/30 block mb-2">1980s</span>
+                                <p class="text-sm">
+                                    貴族時代，想吃上一口道地的披薩，你得踏入五星級飯店的大門。來來大飯店（現台北喜來登）「Pizza House」是身份的象徵。
+                                </p>
+                            </div>
+                            <div class="bg-white/5 p-6 rounded-2xl border border-white/5 hover:border-brand-gold/50 transition-all duration-500">
+                                <span class="text-4xl font-display font-black text-brand-gold/30 block mb-2">1990-2000s</span>
+                                <p class="text-sm">
+                                    連鎖品牌的普及，義大利麵走入大眾視野，卻也開啟了「台式進化史」。那是對異國風情的溫柔誤解。
+                                </p>
+                            </div>
+                        </div>
+                        <p class="mt-8 italic text-brand-gold font-medium">
+                            直到 2010 年後，一場「正統復興運動」悄然展開。大批留義主廚帶著對原汁原味的堅持回台，讓台灣人的味蕾經歷了一次深刻的斷代與洗禮。
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Recommendation Section -->
+                <section class="space-y-10">
+                    <div>
+                        <h2 class="text-3xl font-display font-bold text-white mb-2">老饕教你看門道</h2>
+                        <p class="text-brand-gold font-display tracking-widest uppercase text-sm font-bold">What makes it an "A-List" Star?</p>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 gap-6">
+                        <div class="flex gap-6 items-start">
+                            <div class="flex-shrink-0 w-12 h-12 bg-brand-gold rounded-full flex items-center justify-center font-display font-bold text-brand-dark">01</div>
+                            <div>
+                                <h3 class="text-xl font-bold text-white mb-2 underline decoration-brand-gold decoration-2 underline-offset-4">Al Dente 彈牙精神</h3>
+                                <p class="text-gray-400">這不僅是麵條要彈牙、帶著芯的口感，更是一種對食材質地的尊重。在專業的論述裡，軟爛的麵條是對小麥靈魂的褻瀆。</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 items-start">
+                            <div class="flex-shrink-0 w-12 h-12 bg-brand-gold rounded-full flex items-center justify-center font-display font-bold text-brand-dark">02</div>
+                            <div>
+                                <h3 class="text-xl font-bold text-white mb-2 underline decoration-brand-gold decoration-2 underline-offset-4">D.O.P 血統證明</h3>
+                                <p class="text-gray-400">食材的「血統證明」成了標配，當主廚談起 D.O.P 認證的起司、特級初榨橄欖油時，正是區分平庸與卓越的分水嶺。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+                        <div class="p-6 bg-brand-muted rounded-xl border border-white/5">
+                            <h4 class="text-brand-gold font-bold mb-3 uppercase tracking-wider text-xs">Featured Restaurants</h4>
+                            <ul class="space-y-3 text-sm">
+                                <li class="flex justify-between border-b border-white/5 pb-2"><span>FRASSI</span> <span class="text-gray-500">摩登托斯卡尼</span></li>
+                                <li class="flex justify-between border-b border-white/5 pb-2"><span>Inita</span> <span class="text-gray-500">日義魂混血</span></li>
+                                <li class="flex justify-between border-b border-white/5 pb-2"><span>Solo Pasta</span> <span class="text-gray-500">正統紅蝦評鑑</span></li>
+                                <li class="flex justify-between"><span>Piccola Enoteca</span> <span class="text-gray-500">竹北職人之光</span></li>
+                            </ul>
+                        </div>
+                        <div class="p-6 bg-brand-accent/10 rounded-xl border border-brand-accent/20">
+                            <h4 class="text-brand-accent font-bold mb-3 uppercase tracking-wider text-xs">Cultural Taboos</h4>
+                            <div class="text-sm space-y-2 text-gray-300">
+                                <p>❌ 披薩放鳳梨與玉米</p>
+                                <p>❌ Carbonara 加鮮奶油</p>
+                                <p>❌ 將台南意麵與 Pasta 混為一談</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Future Trends -->
+                <section class="py-12">
+                    <h2 class="text-3xl font-display font-bold text-white mb-10 text-center">未來指南：下一個義大利餐飲潮流</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="glass-card p-6 flex flex-col gap-4 hover:scale-[1.02] transition-transform">
+                            <span class="text-4xl">🍜</span>
+                            <h3 class="text-lg font-bold text-white">手工生麵 (Pasta Fresca)</h3>
+                            <p class="text-sm text-gray-400 leading-relaxed">追求更豐富的咀嚼層次，頂尖餐酒館多設有透明製麵室，主打當日現作、造型多變的手工生麵。</p>
+                        </div>
+                        <div class="glass-card p-6 flex flex-col gap-4 hover:scale-[1.02] transition-transform">
+                            <span class="text-4xl">📍</span>
+                            <h3 class="text-lg font-bold text-white">地域化的極致細分</h3>
+                            <p class="text-sm text-gray-400 leading-relaxed">不再只是去吃「義大利菜」，而是精準地走進一間標榜羅馬蔬食、南意海鮮或拿坡里披薩的專業餐館。</p>
+                        </div>
+                        <div class="glass-card p-6 flex flex-col gap-4 hover:scale-[1.02] transition-transform">
+                            <span class="text-4xl">🧬</span>
+                            <h3 class="text-lg font-bold text-white">台義混血的深層對話</h3>
+                            <p class="text-sm text-gray-400 leading-relaxed">以義大利烹飪邏輯，轉化台灣在地的馬告、臘肉或原住民食材。這是一種文化的主體性覺醒。</p>
+                        </div>
+                        <div class="glass-card p-6 flex flex-col gap-4 hover:scale-[1.02] transition-transform">
+                            <span class="text-4xl">🍷</span>
+                            <h3 class="text-lg font-bold text-white">自然酒 (Natural Wine)</h3>
+                            <p class="text-sm text-gray-400 leading-relaxed">傳統的 Enoteca 模式與自然酒風潮結合，成為年輕世代追求微醺與味蕾純淨的首選。</p>
+                        </div>
+                    </div>
+                </section>
+
+            </article>
+
+            <!-- Sidebar -->
+            <aside class="lg:col-span-4 space-y-8">
+                <div class="sticky top-32 space-y-8">
+                    <!-- Quick Tips Card -->
+                    <div class="bg-brand-gold p-8 rounded-[32px] text-brand-dark custom-shadow animate-float">
+                        <div class="mb-4">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.674a1 1 0 00.922-.606l7-15A1 1 0 0021.337 0H2.663a1 1 0 00-.922 1.394l7 15a1 1 0 00.922.606zM9.663 17v4a1 1 0 001 1h2.674a1 1 0 001-1v-4M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-black mb-4 leading-tight">💡 總結：餐廳挑選小撇步</h3>
+                        <p class="text-sm font-medium mb-6 opacity-80">
+                            下次走進義大利餐廳，不妨先掃視菜單。若看見強調「手工現做（Fatto a Mano）」、「麵條口感預設為 Al Dente」或詳列起司產區，這間餐廳便已具備了優秀的靈魂。
+                        </p>
+                        <button class="w-full bg-brand-dark text-white font-bold py-4 rounded-2xl hover:bg-black transition-colors">
+                            SAVE TO GUIDE
+                        </button>
+                    </div>
+
+                    <!-- Newsletter -->
+                    <div class="glass-card p-8">
+                        <h4 class="text-white font-bold mb-4">Join our Foodie List</h4>
+                        <p class="text-sm text-gray-400 mb-6">Get the latest fine dining updates across Taiwan delivered weekly.</p>
+                        <div class="space-y-3">
+                            <input type="email" placeholder="Email address" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-gold transition-colors">
+                            <button class="w-full bg-white text-brand-dark font-bold py-3 rounded-xl hover:bg-gray-200 transition-colors">JOIN NOW</button>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+        </div>
+    </main>
+
+    <!-- Final Thought Banner -->
+    <section class="bg-white py-24 px-6 overflow-hidden relative">
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <h2 class="text-4xl md:text-5xl font-display font-black text-brand-dark mb-8">
+                義大利料理在台灣的進化，<br/>
+                是我們對「生活質感」追求的縮影。
+            </h2>
+            <p class="text-gray-600 max-w-2xl mx-auto text-lg">
+                從一碗湯麵式的誤會，到如今對風土與技術的極致講究，我們吃下的不僅是美味，更是一場關於美學與文化的深度思辨。
+            </p>
+        </div>
+        <!-- Decorative Elements -->
+        <div class="absolute top-0 left-0 w-64 h-64 bg-brand-gold/10 rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl"></div>
+        <div class="absolute bottom-0 right-0 w-96 h-96 bg-brand-accent/5 rounded-full translate-x-1/3 translate-y-1/3 blur-3xl"></div>
+    </section>
+
+    <!-- Bottom Nav / Footer (App style) -->
+    <div class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50">
+        <div class="glass-card px-8 py-4 flex gap-12 shadow-2xl items-center bg-black/40 backdrop-blur-2xl">
+            <button class="text-brand-gold"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg></button>
+            <button class="text-gray-500 hover:text-white transition-colors"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></button>
+            <button class="text-gray-500 hover:text-white transition-colors"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"/></svg></button>
+        </div>
+    </div>
+
+    <script>
+        // Scroll Progress Bar
+        window.onscroll = function() {
+            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrolled = (winScroll / height) * 100;
+            document.getElementById("progress-bar").style.width = scrolled + "%";
+            
+            // Navbar color change
+            const nav = document.getElementById('navbar');
+            if (winScroll > 100) {
+                nav.classList.add('bg-brand-dark/90', 'backdrop-blur-xl', 'border-b', 'border-white/5');
+                nav.classList.remove('p-6');
+                nav.classList.add('py-4', 'px-6');
+            } else {
+                nav.classList.remove('bg-brand-dark/90', 'backdrop-blur-xl', 'border-b', 'border-white/5');
+                nav.classList.add('p-6');
+                nav.classList.remove('py-4');
+            }
+        };
+
+        // Smooth reveal animations for sections
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in-up');
+                    entry.target.style.opacity = 1;
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = 0;
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
